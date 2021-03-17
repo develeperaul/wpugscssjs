@@ -2,9 +2,10 @@
   "name": "wpugscssjs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/develeperaul/wpugscssjs/issues"
   },
-  "homepage": "https://github.com/develeperaul/wpugscssjs#readme"
+  "homepage": "https://github.com/develeperaul/wpugscssjs#readme",
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^5.26.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-server": "^0.1.2"
+  }
 }
