@@ -13,4 +13,11 @@ module.exports = {
     overlay: true,
     open: true
   },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exlude: '/node_modules'
+    }]
+  }
 }
