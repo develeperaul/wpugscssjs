@@ -1,0 +1,19 @@
+{
+  "name": "wpugscssjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/develeperaul/wpugscssjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/develeperaul/wpugscssjs/issues"
+  },
+  "homepage": "https://github.com/develeperaul/wpugscssjs#readme"
+}
