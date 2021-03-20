@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack serve --config build/webpack.dev.conf.js",
+    "build": "webpack --config build/webpack.build.conf.js"
   },
   "browserslist": [
     "> 1%",
