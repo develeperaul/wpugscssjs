@@ -1,1 +1,4 @@
-import './assets/js/common'
+
+import './assets/js/common';
+import './css/main.css';
+import './scss/main.scss';

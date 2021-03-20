@@ -20,6 +20,20 @@ module.exports = {
      
     },
     {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        MiniCssExtractPlugin.loader,
+        {
+          loader: 'css-loader',
+          options: { sourceMap: true }
+        }, {
+          loader: 'postcss-loader',
+          options: { sourceMap: true }
+        }
+      ]
+    },
+    {
       test: /\.scss$/,
       use: [
         'style-loader',
@@ -28,8 +42,35 @@ module.exports = {
           loader: 'css-loader',
           options: { sourceMap: true }
         }, {
+          loader: 'postcss-loader',
+          options: { sourceMap: true }
+        }, {
           loader: 'sass-loader',
           options: { sourceMap: true }
+        }
+      ]
+    }
+     
+    /*
+    {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        MiniCssExtractPlugin.loader,
+        {
+          loader: 'css-loader',
+          options: { sourceMap: true }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+              
+              sourceMap: true
+          }
+        },
+        {
+          loader: 'sass-loader',
+          options: { sourceMap: true}
         }
       ]
     },
@@ -37,6 +78,7 @@ module.exports = {
       test: /\.css$/i,
       use: [MiniCssExtractPlugin.loader, 'css-loader'],
     } 
+    */
   ]
   },
   devServer: {
@@ -46,7 +88,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ]
+        filename: "[name].css",
+    })
+  ],
 }
