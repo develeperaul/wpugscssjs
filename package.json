@@ -50,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/develeperaul/wpugscssjs/issues"
   },
-  "homepage": "https://github.com/develeperaul/wpugscssjs#readme"
+  "homepage": "https://github.com/develeperaul/wpugscssjs#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
