@@ -22,3 +22,23 @@ line-height: $lineHeight + px;
 color: $color;
 }
 
+@mixin inputStyle($width:320, $height:44){
+ width: $width + px;
+ height: $height + px;
+ padding: 13px 15px;
+ background: #FFFFFF;
+ border: 1px solid $darkshade25;
+ border-radius: 4px;
+ 
+ transition-property: border-color, color;
+ transition-duration: .5s;
+ 
+ &:hover, &:focus {
+  border-color: $darkshade50;
+  @include fontStyle($color: $darkshade75);
+ }
+}
+
+
+
+

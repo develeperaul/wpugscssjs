@@ -1,3 +1,4 @@
+@import 'normalize.css';
 /*
   Base
 */
@@ -7,6 +8,10 @@
 */
 @import './utils/mixin';
 @import './utils/colors';
+/*
+  Components
+*/
+@import './components/input';
 /*
   Layout
 */
