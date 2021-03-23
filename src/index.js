@@ -1,4 +1,10 @@
+// JS
+import './assets/js/'
 
-import './assets/js/common';
-import './css/main.css';
-import './scss/main.scss';
+// SCSS
+import './assets/scss/main.scss'
+
+// CSS (example)
+// import './assets/css/main.css'
+
+
