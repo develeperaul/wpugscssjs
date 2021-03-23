@@ -1,0 +1,16 @@
+body {
+	@include fontStyle();
+}
+
+h1 {
+	@include fontStyle($fontSize: 24, $lineHeight: 29, $fontWeight: 700);
+}
+
+h2 {
+	@include fontStyle($fontWeight: 700, $fontSize: 19, $lineHeight: 23);
+}
+
+h3 {
+	@include fontStyle($fontWeight: 700, $fontSize: 12, $lineHeight: 15);
+	text-transform: uppercase;
+}
