@@ -12,7 +12,7 @@ const PATHS = {
 };
 
 
-const PAGES_DIR = `${PATHS.src}/pug/pages`;
+const PAGES_DIR = `${PATHS.src}/views`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith('.pug'))
@@ -57,7 +57,7 @@ module.exports = {
       },
       {
         // Fonts
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
@@ -139,7 +139,7 @@ module.exports = {
         },
         // Static (copy to '/'):
         {
-          from: `${PATHS.src}/static`,
+          from: `${PATHS.src}/${PATHS.assets}/img/static`,
           to: ''
         }
       ]
