@@ -1,0 +1,10 @@
+.calendar {
+    @include buttonDropdown($width:150);
+    
+    &__text {
+        display: flex;
+        align-items: center;
+        @include fontStyle($color:$darkshade50);
+    }
+    
+}

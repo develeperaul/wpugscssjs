@@ -3,16 +3,9 @@ html(lang='ru')
 	head
 		title 
 	body
-		h1 Raul
-		h2 Raul
-		h3 Raul
-		input.input__email(type='text', name='email', placeholder='Email ')
-		select.select
-			option(value="hi") hi
-			option(value="bi") bi
-		input.input__date(type='text', name='date', placeholder='ДД.ММ.ГГГГ')
-	button.button__bg
-		p.button__text click me
-	button.button__bg_gradient 
-		p.button__text_gradient click me
 		
+	
+	include ./components/input.pug
+	include ./components/buttons.pug
+	include ./components/select.pug
+	include ./components/calendar.pug
