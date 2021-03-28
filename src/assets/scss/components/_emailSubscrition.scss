@@ -1,0 +1,14 @@
+.email-subscription  {
+    @include buttonArray();
+    &__text {
+        display: flex;
+        position: relative;
+        @include fontStyle($color: $darkshade25);
+        @include arrowRight();
+    }
+    
+
+    
+    
+}
+
