@@ -85,6 +85,44 @@ color: $color;
     }
 }
 
+@mixin buttonArray($color:$purple, $width:320){
+    max-width: 100%;
+    width: $width +px;
+    height: 44px;
+    border: 1px solid $darkshade25;
+    border-radius: 4px;  
+    padding-left: 15px;
+    display: inline-block;
+    
+}
 
+@mixin arrowRight($color: $purple) {
+    margin-right: 15px;
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+        transform: rotate(45deg) translate(-35%, -35%);
+        pointer-events: none;
+        
+        
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+        background: $color;
+        width: 14px;
+        height: 2px;
+    }   
+}
 
 
