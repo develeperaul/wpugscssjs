@@ -1,3 +1,5 @@
+
+/*flex миксин*/
 @mixin isFlex($align: center, $justify: center, $direction: row, $wrap: wrap) {
  display: flex;
  align-items: $align;
@@ -5,14 +7,14 @@
  flex-direction: $direction;
  flex-wrap: $wrap;
 }
-
+/**/
 @mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
  background-image: url($url);
  background-repeat: $repeat;
  background-position: $position;
  background-size: $size;
 }  
-
+/*стили для шрифтов*/
 @mixin fontStyle($fontWeight: normal, $fontSize: 14, $lineHeight: 24, $color: $darkshade100){
 font-family: Montserrat;
 font-style: $fontWeight;
@@ -22,6 +24,62 @@ line-height: $lineHeight + px;
 color: $color;
 }
 
+
+/*стрелка на право*/
+@mixin arrowRight($color: $purple) {
+    margin-right: 15px;
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+        transform: rotate(45deg) translate(-35%, -35%);
+        pointer-events: none;
+        
+        
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+        background: $color;
+        width: 14px;
+        height: 2px;
+    }   
+}
+
+/*рамка checkbox*/
+@mixin roundButton {
+    width: 30px;
+    height: 30px;
+    border:1px solid $darkshade50;
+    border-radius: 50%;
+}
+
+/*галочка checkbox*/
+@mixin checkMark {
+    &::before{
+        content: '';
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        right: 10%;
+        position: absolute;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMSAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNUw0LjUgOC41TDkuNSAzLjUiIHN0cm9rZT0idXJsKCNwYWludDBfbGluZWFyKSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSI0LjUiIHkxPSIzIiB4Mj0iNC41IiB5Mj0iMTAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0JDOUNGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QkE0RjkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K");
+        background-repeat:no-repeat;
+        background-position: center;
+        transform: translate(25%, -50%);
+    }
+}
+
+
+/*для инпутов*/
 @mixin inputStyle($width:320, $height:44){
  width: $width + px;
  height: $height + px;
@@ -39,7 +97,7 @@ color: $color;
  }
 }
 
-
+/*элепсоидные кнопки*/
 @mixin buttons($background: $gradient) {
 	width: 99px;
 	height: 44px;
@@ -51,6 +109,7 @@ color: $color;
 	z-index: inherit;
 }
 
+/*кнопка ввода для выпадающего окна*/
 @mixin buttonDropdown($width:320){
 	max-width: 100%;
     width: $width +px;
@@ -85,7 +144,7 @@ color: $color;
     }
 }
 
-@mixin buttonArray($color:$purple, $width:320){
+@mixin buttonArray( $width:320){
     max-width: 100%;
     width: $width +px;
     height: 44px;
@@ -96,33 +155,8 @@ color: $color;
     
 }
 
-@mixin arrowRight($color: $purple) {
-    margin-right: 15px;
-    &::after{
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        
-        width: 9px;
-        height: 9px;
-        border-top: 2px solid $color;
-        border-right: 2px solid $color;
-        transform: rotate(45deg) translate(-35%, -35%);
-        pointer-events: none;
-        
-        
-    }
-    &::before{
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(0%, -50%);
-        background: $color;
-        width: 14px;
-        height: 2px;
-    }   
-}
+
+
+
 
 
