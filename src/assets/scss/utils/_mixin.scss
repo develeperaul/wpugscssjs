@@ -54,7 +54,32 @@ color: $color;
     }   
 }
 
-/*рамка checkbox*/
+/* стрелка вниз */
+@mixin arrowDown(){
+    position: relative;
+    display: flex;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 7px 17px;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $darkshade50;
+        border-right: 2px solid $darkshade50;
+        transform: rotate(135deg);
+        cursor:pointer;
+        pointer-events:none;
+        transition:.25s all ease;
+    }
+    &:hover::after {
+        border-top: 2px solid $darkshade75;
+        border-right: 2px solid $darkshade75;
+    }
+}
+/*круг*/
 @mixin roundButton {
     width: 30px;
     height: 30px;
@@ -62,6 +87,20 @@ color: $color;
     border-radius: 50%;
 }
 
+/*рамка checkbox*/
+@mixin roundCheckbox {
+    &::after {
+        content:'';
+        position: absolute;
+        top: -1px; 
+        bottom: -1px;
+        left: -1px; 
+        right: -1px;
+        background: $gradient;
+        border-radius: 4px;
+        z-index: -1;
+    }
+}
 /*галочка checkbox*/
 @mixin checkMark {
     &::before{
@@ -98,50 +137,27 @@ color: $color;
 }
 
 /*элепсоидные кнопки*/
-@mixin buttons($background: $gradient) {
-	width: 99px;
-	height: 44px;
+@mixin buttons($background: $gradient, $width: 99, $height: 44, $border: 2) {
+	width: $width +px;
+	height: $height +px;
 	border-radius: 22px;
 	position: relative;
-	border: 2px solid transparent;
+	border: $border+px solid transparent;
 	background: $background;
 	opacity: 1;
 	z-index: inherit;
 }
 
 /*кнопка ввода для выпадающего окна*/
-@mixin buttonDropdown($width:320){
+@mixin buttonDropdown($width:320, $borderColor: $darkshade25){
 	max-width: 100%;
     width: $width +px;
     height: 44px;
-    border: 1px solid $darkshade25;
+    border: 1px solid $borderColor;
     border-radius: 4px;  
     display: inline-block;
     padding-left: 15px;
-    &__count {
-        @include fontStyle($color: $darkshade75);
-        position: relative;
-        display: flex;
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 7px 17px;
-            width: 7px;
-            height: 7px;
-            border-top: 2px solid $darkshade50;
-            border-right: 2px solid $darkshade50;
-            transform: rotate(135deg);
-            cursor:pointer;
-            pointer-events:none;
-            transition:.25s all ease;
-        }
-        &:hover::after {
-            border-top: 2px solid $darkshade75;
-            border-right: 2px solid $darkshade75;
-        }
-    }
+
 }
 
 @mixin buttonArray( $width:320){
