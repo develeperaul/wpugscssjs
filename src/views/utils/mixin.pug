@@ -1,0 +1,7 @@
+//- checkbox list
+mixin checkboxList(items)
+    ul.checkbox__list
+        each item in items
+            li.checkbox__item
+                input.checkbox__input(type="checkbox")
+                span.checkbox__text #{item}
