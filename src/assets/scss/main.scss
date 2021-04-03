@@ -11,12 +11,16 @@
 /*
   Components
 */
+@import './components/checkbox';
 @import './components/emailSubscrition';
 @import './components/inputEmail';
 @import './components/inputDate';
 @import './components/buttons';
-@import './components/select';
 @import './components/calendar';
+@import './components/guests';
+
+@import './components/heart';
+@import './components/star';
 /*
   Layout
 */
