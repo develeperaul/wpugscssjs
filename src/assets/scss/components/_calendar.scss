@@ -1,5 +1,9 @@
 .calendar {
     @include buttonDropdown($width:150);
+    &__count {
+        @include fontStyle();
+        @include arrowDown();
+    }
     
     &__text {
         display: flex;
