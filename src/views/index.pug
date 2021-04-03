@@ -4,10 +4,19 @@ html(lang='ru')
 		title 
 	body
 		
-	
+	- var titleArr = ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']
+	-var titleArr2 = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+	include ./utils/mixin.pug
+	+checkboxList(titleArr)
+	+checkboxList(titleArr2)
+
 	include ./components/inputEmail.pug
 	include ./components/buttons.pug
-	include ./components/select.pug
+	include ./components/guests.pug
 	include ./components/calendar.pug
 	include ./components/inputDate.pug
 	include ./components/emailSubscription.pug
+
+	include ./components/heart.pug
+	include ./components/star.pug
+	
