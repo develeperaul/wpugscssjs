@@ -1,6 +1,7 @@
 .payment{
     &__button{
-        @include buttons($width:320, $height:44)
+        @include buttons($width:320, $height:44);
+        border: none;
     }
     &__text{
         @include fontStyle($fontWeight:700, $color:$white);
