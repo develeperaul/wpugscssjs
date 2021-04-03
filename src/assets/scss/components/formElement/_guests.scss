@@ -8,6 +8,7 @@
 .guests {
     display: inline-block;
     &__button {
+        margin-top: 6px;
         @include buttonDropdown();
         &:focus {
             @include buttonDropdown($borderColor: $darkshade75);
@@ -15,7 +16,7 @@
             border-bottom-right-radius: 0;
         }
     }
-    &__title {
+    &__subtitle {
         @include arrowDown();
     }
     &__dropdown{
