@@ -1,0 +1,57 @@
+
+
+.button__apply {
+    @include fontStyle($fontWeight:700, $fontSize:12, $lineHeight:15,$color: $purple);
+    text-transform: uppercase;
+    display: inline-block;
+}
+.guests {
+    display: inline-block;
+    &__button {
+        @include buttonDropdown();
+        &:focus {
+            @include buttonDropdown($borderColor: $darkshade75);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &__title {
+        @include arrowDown();
+    }
+    &__dropdown{
+        display: none;
+        border: 1px solid $darkshade75;    
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 20px $darkshade5;
+    }
+    &__list {
+        
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 13px 7px 13px 15px;
+    }
+    &__text, &__count {
+        @include fontStyle($fontWeight:700,$fontSize:12, $lineHeight:15 );
+        text-transform: uppercase;
+        margin: 0 10px;
+        
+    }
+    &__remove, &__add{
+        @include roundButton();
+        @include fontStyle($fontSize:18, $lineHeight:22, $color:$darkshade50);
+    }
+
+    &__choice {
+        display: flex;
+        flex-direction: row-reverse;
+        margin:0 7px 13px 15px;
+    }
+    
+}
+
+    
