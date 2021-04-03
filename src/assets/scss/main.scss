@@ -9,18 +9,22 @@
 @import './utils/mixin';
 @import './utils/colors';
 /*
-  Components
+  Components formElement/
 */
-@import './components/checkbox';
-@import './components/emailSubscrition';
-@import './components/inputEmail';
-@import './components/inputDate';
-@import './components/buttons';
-@import './components/calendar';
-@import './components/guests';
+@import './components/formElement/checkbox';
+@import './components/formElement/emailSubscrition';
+@import './components/formElement/inputEmail';
+@import './components/formElement/inputDate';
+@import './components/formElement/buttons';
+@import './components/formElement/calendar';
+@import './components/formElement/guests';
 
-@import './components/heart';
-@import './components/star';
+@import './components/formElement/payment';
+
+@import './components/formElement/heart';
+@import './components/formElement/star';
+
+
 /*
   Layout
 */
