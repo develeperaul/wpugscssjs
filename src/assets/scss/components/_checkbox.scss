@@ -1,5 +1,5 @@
 .checkbox {
-    &__label{
+    &__list{
         display: inline-block;
         
     }
@@ -9,7 +9,7 @@
         text-align: center;
     }
 
-    &__label input[type=checkbox]{
+    &__input[type=checkbox]{
         appearance: none;
         display: inline-block;
         width: 22px;
@@ -25,23 +25,10 @@
         opacity: 1;
         z-index: inherit;
         background-clip: padding-box;
-        &::after {
-            content:'';
-            position: absolute;
-            top: -1px; 
-            bottom: -1px;
-            left: -1px; 
-            right: -1px;
-            background: $gradient;
-            border-radius: 4px;
-            z-index: -1;
-        }
+        @include roundCheckbox();
     }
     
-    &__label input[type=checkbox]:checked {
+    &__input[type=checkbox]:checked {
         @include checkMark();
-    }
-    &__input{
-
     }
 }
