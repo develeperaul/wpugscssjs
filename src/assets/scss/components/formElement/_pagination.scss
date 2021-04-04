@@ -1,0 +1,64 @@
+.pagination{
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        padding: 20px;
+        
+    }
+    &__item{
+        &_active{
+            position: relative;
+            display: inline-block;
+            @include fontStyle($fontWeight:700, $color:$white);
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: $gradient;
+                z-index: -1;
+            }
+        .pagination__link {
+            @include fontStyle($fontWeight:700, $color:$white)
+        }
+        }
+
+        &_next{
+            position: relative;
+            display: inline-block;
+            @include fontStyle($fontWeight:700, $color:$white);
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                z-index: -1;
+            }
+            .pagination__link{
+                @include arrowRight($color:$white);
+                &::after, &::before{
+                    right: 40%;
+                }
+            }
+        }
+    }
+
+    &__link{
+        @include fontStyle($color:$darkshade50);
+
+       
+        
+    }
+    
+}
