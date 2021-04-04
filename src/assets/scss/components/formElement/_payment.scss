@@ -1,0 +1,14 @@
+.payment{
+    &__button{
+        @include buttons($width:320, $height:44);
+        border: none;
+    }
+    &__text{
+        @include fontStyle($fontWeight:700, $color:$white);
+        text-transform: uppercase;
+        @include arrowRight($color:$white);
+        &::after, &::before{
+            margin-right: 20px;
+        }
+            }
+}

@@ -161,7 +161,7 @@ color: $color;
 }
 
 @mixin buttonArray( $width:320){
-    max-width: 100%;
+    
     width: $width +px;
     height: 44px;
     border: 1px solid $darkshade25;
