@@ -6,14 +6,14 @@ mixin checkboxList(items)
                 input.checkbox__input(type="checkbox")
                 span.checkbox__text #{item}
 //-buttonBgGradient
-mixin buttonBgGradient()
+mixin buttonBgGradient(title)
     button.button__bg 
-        p.button__text click me
+        p.button__text= title
 
 //-buttonBorderGradient
-mixin buttonBorderGradient()
+mixin buttonBorderGradient(title)
     button.button__bg_gradient 
-        p.button__text_gradient click me
+        p.button__text_gradient=title
 
 //-calendar
 mixin calendar(name)
@@ -68,15 +68,15 @@ mixin inputDate()
 
 
 //-inputEmail
-mixin inputEmail()
-    input.email(type='text', name='email', placeholder='Email ')
+mixin input(type)
+    input.email(type=type, name=type, placeholder=type)
 //-pagination
 
 //-payment
-mixin payment()
+mixin payment(title)
     .payment
         button.payment__button 
-            span.payment__text перейти к оплате 
+            span.payment__text= title
 
 //-star
 - var n = 0;

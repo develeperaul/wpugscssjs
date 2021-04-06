@@ -1,7 +1,7 @@
 form.searchForm(action="")
-    h2.searchForm__title Найдем номера под ваши пожелания
+    h1.searchForm__title Найдем номера под ваши пожелания
     .searchForm__calendar
         +calendar('прибытие')
         +calendar('выезд')   
     +guests()
-    +payment()
+    +payment("перейти к оплате")
