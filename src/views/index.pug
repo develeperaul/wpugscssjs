@@ -7,21 +7,22 @@ html(lang='ru')
 	- var titleArr = ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']
 	-var titleArr2 = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
 	include ./utils/mixin.pug
-	+checkboxList(titleArr)
-	+checkboxList(titleArr2)
-
-	include ./components/inputEmail.pug
-	include ./components/buttons.pug
-	include ./components/guests.pug
-	include ./components/calendar.pug
-	include ./components/inputDate.pug
-	include ./components/emailSubscription.pug
+	//-
+		+checkboxList(titleArr)
+		+checkboxList(titleArr2)
+		+star()
+		+payment()
+		+inputDate()
+		+heart()
+		+guests()
+		+emailSubscription()
+		+calendar('прибытие')
+		+calendar('выезд')
+		+buttonBorderGradient()
+		+buttonBgGradient()
+		+inputEmail()
+	
 	include ./components/pagination.pug
-
-	include ./components/payment.pug
-
-	include ./components/heart.pug
-	include ./components/star.pug
 
 	include ./components/searchForm.pug
 
