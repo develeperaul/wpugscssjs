@@ -5,3 +5,83 @@ mixin checkboxList(items)
             li.checkbox__item
                 input.checkbox__input(type="checkbox")
                 span.checkbox__text #{item}
+//-buttonBgGradient
+mixin buttonBgGradient()
+    button.button__bg 
+        p.button__text click me
+
+//-buttonBorderGradient
+mixin buttonBorderGradient()
+    button.button__bg_gradient 
+        p.button__text_gradient click me
+
+//-calendar
+mixin calendar(name)
+    .calendar
+        h3.calendar__title= name
+        button.calendar__button 
+            span.calendar__count
+                time(datetime="ДД.ММ.ГГГГ") ДД.ММ.ГГГГ
+//-emailSubscription
+mixin emailSubscription()
+    button.email-subscription
+        span.email-subscription__text Email
+
+//-guests
+mixin guests()
+    .guests
+        h3.guests__title Гости
+        button.guests__button
+            span.guests__subtitle Сколько гостей
+        .guests__dropdown
+            ul.guests__list
+                li.guests__item
+                    span.guests__text взрослые
+                    .guest__counts
+                        button.guests__remove -
+                        span.guests__count 0
+                        button.guests__add +
+                li.guests__item
+                    span.guests__text дети
+                    .guest__counts
+                        button.guests__remove -
+                        span.guests__count 0
+                        button.guests__add +
+                li.guests__item
+                    span.guests__text младенцы
+                    .guest__counts
+                        button.guests__remove -
+                        span.guests__count 0
+                        button.guests__add +
+            .guests__choice
+                button.button__apply применить
+
+//-heart
+mixin heart()
+    .heart
+        .heart__button.heart__button_borderGradient
+            .heart_gradient     
+            span.heart__title.heart__title_gradient 12
+//-inputDate
+mixin inputDate()
+    input.date(type='text', name='date', placeholder='ДД.ММ.ГГГГ')
+
+
+//-inputEmail
+mixin inputEmail()
+    input.email(type='text', name='email', placeholder='Email ')
+//-pagination
+
+//-payment
+mixin payment()
+    .payment
+        button.payment__button 
+            span.payment__text перейти к оплате 
+
+//-star
+- var n = 0;
+mixin star(items)
+    .star
+        while n < 5
+            - n++
+            .star_border
