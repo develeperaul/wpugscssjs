@@ -1,3 +1,9 @@
+//- radiobutton
+mixin radioButton(id, text)
+    .radio
+        input.radio__button(type="radio" id=id)
+        label.radio__text(for=id)=text
+    
 //- checkbox list
 mixin checkboxList(items)
     ul.checkbox__list
@@ -67,9 +73,9 @@ mixin inputDate()
     input.date(type='text', name='date', placeholder='ДД.ММ.ГГГГ')
 
 
-//-inputEmail
-mixin input(type)
-    input.email(type=type, name=type, placeholder=type)
+//-input
+mixin input(style, type, name)
+    input(class=style, type=type, name=name, placeholder=name)
 //-pagination
 
 //-payment
