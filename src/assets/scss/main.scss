@@ -8,6 +8,12 @@
 */
 @import './utils/mixin';
 @import './utils/colors';
+
+
+/*
+  Layout
+*/
+@import './loyout/general';
 /*
   Components formElement/
 */
@@ -20,6 +26,7 @@
 @import './components/formElement/calendar';
 @import './components/formElement/guests';
 @import './components/formElement/pagination';
+@import './components/formElement/radioButton';
 
 @import './components/formElement/payment';
 
@@ -29,11 +36,7 @@
 
 @import './components/cards/searchForm';
 @import './components/cards/loginForm';
+@import './components/cards/registrationFrom';
+@import './components/cards/cardForm';
 
 
-
-
-/*
-  Layout
-*/
-@import './loyout/general';

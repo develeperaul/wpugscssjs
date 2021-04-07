@@ -1,8 +1,9 @@
 form.loginForm(action="") 
     h1.loginForm__title Войти
-    +input('Email')
-    +input('Пароль')
+    +input('email','email','Email')
+    +input('password','password','Пароль')
     +payment('Войти')
     .loginForm__create
         .loginForm__subtitle Нет аккаунта на Toxin?
         +buttonBorderGradient('создать')
+        
